@@ -104,3 +104,6 @@ def div(request):
     n2 = int(request.POST["num2"])
     df=n1/n2
     return render(request,"result.html",{"data":df})
+
+def banker(request):
+    return HttpResponse("This is Finances website")
