@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login_box">
+        <h1>Signin Page</h1>
+        <form action="/signin/" method="post">
+            {% csrf_token %}
+            <label for="username">username</label>
+            <input type="text" placeholder="Enter username" name="username">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter password" name="Password1">
+            <input type="button" value="submit" class="btn1">
+        </form>
+
+        {% if messages %}
+           {% for i in messages %}
+              <h1>{{i}}</h1>
+           {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculation</title>
+</head>
+<body>
+    <form  method="post">
+        {% csrf_token %}
+        <hr>
+        <h2>Airthmetic Operation</h2>
+        <hr>
+        first_number :- <input type="text" placeholder="Enter first number" name="num1"><br><br>
+        Second_number :- <input type="text" placeholder="Enter second number" name="num2"><br><br>
+        <button formaction="add">addition</button>
+        <button formaction="sub">substruction</button>
+        <button formaction="mult">multiplication</button>
+        <button formaction="div">division</button>
+
+    </form>
+</body>
+</html>
+
+{% endblock %}
